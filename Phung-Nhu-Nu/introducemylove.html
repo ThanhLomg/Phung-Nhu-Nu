@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Người yêu của Long</title>
+    <style>
+        .card{
+        display: flex;
+        border: 4px snow solid;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+        h2{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:dimgrey;
+            padding-left: 10px;
+        }
+        img{
+            border-radius: 50%;
+            height: 160px;
+            float: left;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            transition: 4s;
+        }
+        .img1{
+            border-radius: 20px;
+            height: 100px;
+            float: left;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: dimgray;
+            font-size: 20px;
+        }
+        a:hover{
+            color: lightcoral;
+        }
+        a:active{
+            color: beige;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .story {
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        max-width: 100%;
+        padding: 0;
+    }
+    }
+        @media screen and (max-width: 400px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+    }
+    }
+    </style>
+</head>
+<body style="background-color: bisque;">
+    <div class="card">
+        <a href="#" onclick="showImage()">
+        <img src="Photo/Nguoi yeu (11).jpg" alt="em iu"></a>
+        <h2>Phùng Nhù Nu❤️<br>06/11/2004 <br>
+           <ul>
+            <li><a href="https://www.facebook.com/nowuuu.uu">FaceBook🩵</a></li>
+            <li><a href="https://www.instagram.com/now.uu/?hl=en">Instagram🧡</a></li>
+            <li><a href="https://www.tiktok.com/@nuuuu0044">TikTok🖤</a></li>
+            <li><a href="index.html">More...💕</a></li>
+           </ul>
+           <p style="font-size: 12px;">note: Đây là 1 cô gái đáng yêu, trang web này là của người yêu bạn này đang code dở,
+             trong tương lai có thể sẽ hoàn thiện hơn, bạn dám chê, dám nhận xét, tôi dám thay đổi.</p>
+           <a href="Link.html">Tap UwU</a>
+
+
+           <div class="overlay" id="overlay" style="display: none;">
+            <button class="back-button" onclick="hideImage(event)">Quay lại</button>
+            <img class="img1" src="Photo/Nguoi yeu (18).jpg" alt="em iu">
+            <div class="story">
+                <p style="padding-left: 10px;">3/11/2023, Tôi gặp em <br>7/11/2023, Tớ thích cậu 
+                    <br>27/11/2023, Tớ yêu cậu <br>Anh yêu em ❤️</p>
+            </div>
+        </div>
+
+        <script>
+            function showImage() {
+                document.getElementById("overlay").style.display = "flex";
+            }
+            function hideImage(event) {
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+</html>
